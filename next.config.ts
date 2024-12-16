@@ -33,7 +33,10 @@ const nextConfig: NextConfig = {
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@/components": path.resolve(__dirname, "components"),
+      "@": path.resolve(__dirname, "./"),
+      "@/components": path.resolve(__dirname, "./components"),
+      "@constants": path.resolve(__dirname, "./constants"),
+      "@lib": path.resolve(__dirname, "./lib"),
     };
     return config;
   },
